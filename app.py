@@ -19,6 +19,8 @@ from translate import Translator
 
 warnings.filterwarnings("ignore")
 
+
+
 load_dotenv()
 
 hide_st_style = """
@@ -243,6 +245,37 @@ diseases_list = {
     35: 'Psoriasis',
     27: 'Impetigo'
 }
+
+
+# Initialize session state for name
+
+name_input = ""
+if 'name_input' not in st.session_state:
+    st.session_state.name_input = None
+if 'button_clicked' not in st.session_state:
+    st.session_state.button_clicked = False
+
+def main():
+    # Display input field if name is not set
+    if st.session_state.name_input is None:
+        st.subheader("Welcome! Please enter your name:")
+        name_input = st.text_input("Your Name", "")
+
+        # Button to submit the name
+        if st.button("Submit"):
+            if name_input:
+                st.session_state.name_input = name_input  # Update session state
+                st.session_state.button_clicked = True  # Set button clicked state
+            else:
+                st.warning("Please enter a name.")
+    else:
+        # Display greeting if name is already set
+        st.header(f"Welcome back, {st.session_state.name_input}!")
+
+if __name__ == "__main__":
+    main()
+
+
 
 # Initialize session state for the data to generate the report
 if "predicted" not in st.session_state:
@@ -598,7 +631,7 @@ elif selected == "Recommendations":
     with col1:
         # Check if the user is logged in using session state variables
         if st.session_state.get("signedOut", True):
-            st.title(f"Welcome {'Ajay'} 🎉")
+            st.title(f"Welcome {name_input} 🎉")
             st.header("DocBuddy Recommendation Center 🔮")
             st.divider()
             symptoms_list = [
@@ -701,7 +734,7 @@ elif selected == "Generate Report":
     col1, col2 = st.columns([2, 1])
     with col1:
         if st.session_state.get("signedOut", True):
-            st.title(f"Welcome {'Ajay'} 🎉")
+            st.title(f"Welcome {name_input} 🎉")
             st.header("DocBuddy Medical Report Generation 📃")
             st.divider()
             col3, col4 = st.columns([2, 2])
@@ -759,7 +792,7 @@ elif selected == "Chat With Me":
     col1, col2 = st.columns([2, 1])
     with col1:
         if st.session_state.get("signedOut", True):
-            st.markdown(f"#### Welcome, {'Ajay'} 🎉")
+            st.markdown(f"#### Welcome, {name_input} 🎉")
             st.markdown("""
                 # :rainbow[Chat With DocBuddy.ai 🗨️]
             """)

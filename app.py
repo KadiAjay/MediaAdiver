@@ -543,7 +543,7 @@ if selected == "Home":
 
     with col2:
         # st.image(r"static\\DocBuddy-Home.png")
-         st.image(r"static/DocBuddy-Home.png")
+         st.image("static/DocBuddy-Home.png")
 
 # ========= WORKFLOW TAB =========
 elif selected == "WorkFlow":
@@ -577,8 +577,8 @@ elif selected == "WorkFlow":
         ''')
 
     with col2:
-        st.image(r"static\\DocBuddy-WorkFlow-Tab.png")
-        st.image(r"static/DocBuddy-WorkFlow-Tab.png")
+        st.image("static\\DocBuddy-WorkFlow-Tab.png")
+        st.image("static/DocBuddy-WorkFlow-Tab.png")
 
 # ========= Accounts TAB =========
 # elif selected == "Account":
@@ -686,7 +686,7 @@ elif selected == "Recommendations":
             st.markdown("* Then go to the Login Page and Login Yourself.")
     with col2:
         # st.image(r"static\\Docbuddy-Recommendations.png")
-         st.image(r"static/Docbuddy-Recommendations.png")
+         st.image("static/Docbuddy-Recommendations.png")
 
 # ========= Report Generation TAB =========
 elif selected == "Generate Report":
@@ -741,7 +741,7 @@ elif selected == "Generate Report":
             st.markdown("* Then go to the Login Page and Login Yourself.")
     with col2:
         # st.image(r"static\\DocBuddy-Generate-Report.png")
-        st.image(r"static/DocBuddy-Generate-Report.png")
+        st.image("static/DocBuddy-Generate-Report.png")
 
 # ========= Chat with me TAB =========
 elif selected == "Chat With Me":
@@ -762,4 +762,4 @@ elif selected == "Chat With Me":
             st.markdown("* Then go to the Login Page and Login Yourself.")
     with col2:
         # st.image(r"static\\DocBuddy-Chat-With-Me.png")
-        st.image(r"static/DocBuddy-Chat-With-Me.png")
+        st.image("static/DocBuddy-Chat-With-Me.png")

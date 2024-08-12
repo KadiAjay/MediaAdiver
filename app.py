@@ -542,7 +542,6 @@ if selected == "Home":
         st.markdown("DocBuddy is here to help you live your healthiest life!")
 
     with col2:
-        # st.image(r"static\\DocBuddy-Home.png")
          image_path = "static/DocBuddy-Home.png"
          if os.path.exists(image_path):
             st.image(image_path)
@@ -581,7 +580,6 @@ elif selected == "WorkFlow":
         ''')
 
     with col2:
-        # st.image("static\\DocBuddy-WorkFlow-Tab.png")
         image_path = "static/DocBuddy-WorkFlow-Tab.png"
         if os.path.exists(image_path):
             st.image(image_path)
@@ -694,12 +692,9 @@ elif selected == "Recommendations":
             st.markdown("* Please go back to the Account section.")
             st.markdown("* Then go to the Login Page and Login Yourself.")
     with col2:
-        # st.image(r"static\\Docbuddy-Recommendations.png")
-        image_path = "static/Docbuddy-Recommendations.png"
+        image_path = "static/DocBuddy-Recommendations.png"
         if os.path.exists(image_path):
             st.image(image_path)
-        else:
-            st.error(f"Image not found: {image_path}")
 
 # ========= Report Generation TAB =========
 elif selected == "Generate Report":
@@ -753,7 +748,6 @@ elif selected == "Generate Report":
             st.markdown("* Please go back to the Account section.")
             st.markdown("* Then go to the Login Page and Login Yourself.")
     with col2:
-        # st.image(r"static\\DocBuddy-Generate-Report.png")
         image_path = "static/DocBuddy-Generate-Report.png"
         if os.path.exists(image_path):
             st.image(image_path)
@@ -778,9 +772,6 @@ elif selected == "Chat With Me":
             st.markdown("* Please go back to the Account section.")
             st.markdown("* Then go to the Login Page and Login Yourself.")
     with col2:
-        # st.image(r"static\\DocBuddy-Chat-With-Me.png")
         image_path = "static/DocBuddy-Chat-With-Me.png"
         if os.path.exists(image_path):
             st.image(image_path)
-        else:
-            st.error(f"Image not found: {image_path}")

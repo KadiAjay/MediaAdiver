@@ -543,7 +543,11 @@ if selected == "Home":
 
     with col2:
         # st.image(r"static\\DocBuddy-Home.png")
-         st.image("static/DocBuddy-Home.png")
+         image_path = "static/DocBuddy-Home.png"
+         if os.path.exists(image_path):
+            st.image(image_path)
+         else:
+            st.error(f"Image not found: {image_path}")
 
 # ========= WORKFLOW TAB =========
 elif selected == "WorkFlow":
@@ -578,7 +582,12 @@ elif selected == "WorkFlow":
 
     with col2:
         # st.image("static\\DocBuddy-WorkFlow-Tab.png")
-        st.image("static/DocBuddy-WorkFlow-Tab.png")
+        image_path = "static/DocBuddy-WorkFlow-Tab.png"
+        if os.path.exists(image_path):
+            st.image(image_path)
+        else:
+            st.error(f"Image not found: {image_path}")
+
 
 # ========= Accounts TAB =========
 # elif selected == "Account":
@@ -686,7 +695,11 @@ elif selected == "Recommendations":
             st.markdown("* Then go to the Login Page and Login Yourself.")
     with col2:
         # st.image(r"static\\Docbuddy-Recommendations.png")
-         st.image("static/Docbuddy-Recommendations.png")
+        image_path = "static/Docbuddy-Recommendations.png"
+        if os.path.exists(image_path):
+            st.image(image_path)
+        else:
+            st.error(f"Image not found: {image_path}")
 
 # ========= Report Generation TAB =========
 elif selected == "Generate Report":
@@ -741,7 +754,11 @@ elif selected == "Generate Report":
             st.markdown("* Then go to the Login Page and Login Yourself.")
     with col2:
         # st.image(r"static\\DocBuddy-Generate-Report.png")
-        st.image("static/DocBuddy-Generate-Report.png")
+        image_path = "static/DocBuddy-Generate-Report.png"
+        if os.path.exists(image_path):
+            st.image(image_path)
+        else:
+            st.error(f"Image not found: {image_path}")
 
 # ========= Chat with me TAB =========
 elif selected == "Chat With Me":
@@ -762,4 +779,8 @@ elif selected == "Chat With Me":
             st.markdown("* Then go to the Login Page and Login Yourself.")
     with col2:
         # st.image(r"static\\DocBuddy-Chat-With-Me.png")
-        st.image("static/DocBuddy-Chat-With-Me.png")
+        image_path = "static/DocBuddy-Chat-With-Me.png"
+        if os.path.exists(image_path):
+            st.image(image_path)
+        else:
+            st.error(f"Image not found: {image_path}")

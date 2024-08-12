@@ -4,18 +4,13 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 import numpy as np
 import pickle
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import auth
-import requests
-import json
 import ast
 from dotenv import load_dotenv
 import os
 import warnings
 from datetime import datetime
 from reportlab.lib.pagesizes import letter
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem
 from typing import Generator
 from groq import Groq

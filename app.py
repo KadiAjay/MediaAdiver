@@ -577,7 +577,7 @@ elif selected == "WorkFlow":
         ''')
 
     with col2:
-        st.image("static\\DocBuddy-WorkFlow-Tab.png")
+        # st.image("static\\DocBuddy-WorkFlow-Tab.png")
         st.image("static/DocBuddy-WorkFlow-Tab.png")
 
 # ========= Accounts TAB =========
